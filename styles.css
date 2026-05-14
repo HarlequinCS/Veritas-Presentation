@@ -471,6 +471,73 @@ table.data td strong { color: var(--navy); font-weight: 600; }
   font-weight: 500;
 }
 
+/* Slide 10 media layout */
+.slide-simulation .body {
+  gap: 20px;
+}
+
+.slide-simulation .pipeline {
+  gap: 14px;
+}
+
+.slide-simulation .pipe-step {
+  padding: 18px 18px;
+}
+
+.slide-simulation .pipe-num {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.slide-simulation .pipe-text {
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.slide-simulation .simple {
+  gap: 14px;
+}
+
+.slide-simulation .simple li {
+  font-size: 18px;
+  line-height: 1.45;
+}
+
+.demo-card {
+  max-width: 980px;
+  padding: 22px 24px;
+}
+
+.demo-card h3 {
+  margin-bottom: 14px;
+}
+
+.demo-figure {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.demo-image {
+  display: block;
+  width: 100%;
+  max-width: 860px;
+  max-height: 250px;
+  object-fit: contain;
+  object-position: center;
+  margin: 0 auto;
+  padding: 10px;
+  background: #0e1524;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+}
+
+.demo-caption {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+
 /* Stat strip */
 .stats {
   display: grid;

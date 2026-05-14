@@ -46,7 +46,7 @@
     </section>
 
     <!-- SLIDE 2 -->
-    <section class="slide">
+    <section class="slide slide-simulation">
       <div class="strip">
         <span class="brand">VERITAS</span>
         <span>Chapter 1 · Background</span>
@@ -367,40 +367,18 @@
           <li><strong>Technical architecture:</strong> Executes within an <strong>Isolated Docker Sandbox</strong> utilizing a <strong>Redis Asynchronous Queue</strong> for non-blocking performance.</li>
         </ul>
 
-        <div class="col-card" style="max-width: 980px; padding: 22px 24px;">
-          <h3 style="margin-bottom: 14px;">Visual PoC / Dashboard Demo</h3>
-          <div
-            role="img"
-            aria-label="Simulated exploit dashboard placeholder showing captured XSS and SQL injection activity"
-            style="
-              width: 100%;
-              min-height: 190px;
-              border: 2px dashed var(--gold);
-              background:
-                linear-gradient(180deg, rgba(30, 58, 95, 0.06), rgba(20, 41, 67, 0.12)),
-                repeating-linear-gradient(
-                  90deg,
-                  rgba(30, 58, 95, 0.05) 0,
-                  rgba(30, 58, 95, 0.05) 1px,
-                  transparent 1px,
-                  transparent 32px
-                );
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              text-align: center;
-              padding: 24px;
-              color: var(--navy);
-              font-size: 18px;
-              font-weight: 600;
-              line-height: 1.5;
-            "
-          >
-            Visual PoC / Dashboard Demo Placeholder
-          </div>
-          <p style="margin-top: 12px; font-size: 16px; line-height: 1.5; color: var(--ink-soft);">
-            Figure: Simulated XSS/SQLi Exploit Captured via Playwright
-          </p>
+        <div class="col-card demo-card">
+          <h3>Visual PoC / Dashboard Demo</h3>
+          <figure class="demo-figure">
+            <img
+              src="./Scan.png"
+              alt="Simulated XSS and SQL injection exploit dashboard captured via Playwright"
+              class="demo-image"
+            />
+            <figcaption class="demo-caption">
+              Figure: Simulated XSS/SQLi Exploit Captured via Playwright
+            </figcaption>
+          </figure>
         </div>
       </div>
       <div class="footer">
