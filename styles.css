@@ -59,6 +59,7 @@ html, body {
   display: none;
   flex-direction: column;
   padding: 64px 96px 56px;
+  overflow-y: auto;
   opacity: 0;
   transition: opacity 0.35s ease;
 }
@@ -850,5 +851,370 @@ table.data td strong { color: var(--navy); font-weight: 600; }
   .progress-track,
   .notes {
     display: none;
+  }
+}
+
+@media (max-width: 1440px) {
+  .slide {
+    padding: 56px 72px 56px;
+  }
+
+  h1.slide-title {
+    font-size: 40px;
+    max-width: 980px;
+  }
+
+  .title-slide h1.slide-title {
+    font-size: 56px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+  }
+
+  .bullets li,
+  .simple li {
+    font-size: 19px;
+  }
+
+  .footer {
+    left: 72px;
+    right: 72px;
+  }
+
+  .notes {
+    padding: 24px 72px 28px;
+  }
+}
+
+@media (max-width: 1180px) {
+  .slide {
+    padding: 48px 40px 88px;
+  }
+
+  .strip {
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 28px;
+  }
+
+  h1.slide-title {
+    font-size: 34px;
+  }
+
+  .title-slide {
+    padding: 64px 48px 88px;
+  }
+
+  .title-slide h1.slide-title {
+    font-size: 48px;
+  }
+
+  .title-slide .subtitle {
+    font-size: 21px;
+  }
+
+  .body {
+    gap: 22px;
+    max-width: none;
+  }
+
+  .bullets li,
+  .simple li {
+    font-size: 17px;
+    line-height: 1.45;
+  }
+
+  .two-col,
+  .summary-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .pipeline {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .stats {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+
+  .table-wrap {
+    overflow-x: auto;
+  }
+
+  table.data {
+    min-width: 760px;
+  }
+
+  .slide-demo .body,
+  .slide-simulation .body {
+    gap: 16px;
+  }
+
+  .report-frame {
+    min-height: 340px;
+  }
+
+  .report-image {
+    max-height: 100%;
+  }
+
+  .footer {
+    left: 40px;
+    right: 40px;
+    bottom: 20px;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+  }
+
+  .footer .candidate {
+    max-width: 100%;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: initial;
+  }
+
+  .footer .page {
+    padding-right: 0;
+  }
+
+  .controls {
+    bottom: 16px;
+    right: 16px;
+  }
+
+  .hint {
+    top: 12px;
+    right: 16px;
+  }
+
+  .notes {
+    padding: 20px 40px 24px;
+  }
+}
+
+@media (max-width: 760px) {
+  .slide {
+    padding: 40px 20px 104px;
+  }
+
+  .strip {
+    font-size: 10px;
+    letter-spacing: 0.1em;
+  }
+
+  .eyebrow {
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    margin-bottom: 12px;
+  }
+
+  .eyebrow::after {
+    width: 20px;
+    margin-left: 8px;
+  }
+
+  h1.slide-title {
+    font-size: 28px;
+    line-height: 1.2;
+  }
+
+  .title-slide {
+    padding: 48px 20px 104px;
+  }
+
+  .title-slide h1.slide-title {
+    font-size: 40px;
+  }
+
+  .title-slide .subtitle {
+    font-size: 18px;
+    margin-bottom: 28px;
+  }
+
+  .title-meta {
+    grid-template-columns: 1fr;
+    gap: 6px 0;
+  }
+
+  .title-meta .key {
+    margin-top: 8px;
+  }
+
+  .bullets {
+    gap: 16px;
+  }
+
+  .bullets li {
+    grid-template-columns: 30px 1fr;
+    gap: 12px;
+    font-size: 16px;
+  }
+
+  .bullets li .num {
+    font-size: 16px;
+  }
+
+  .simple {
+    gap: 14px;
+  }
+
+  .simple li {
+    padding-left: 24px;
+    font-size: 16px;
+  }
+
+  .simple li::before {
+    top: 10px;
+    width: 14px;
+  }
+
+  .pullquote {
+    padding: 18px 18px;
+  }
+
+  .pullquote p {
+    font-size: 18px;
+  }
+
+  .col-card {
+    padding: 22px 18px;
+  }
+
+  .col-card h3 {
+    font-size: 19px;
+  }
+
+  .col-card li,
+  .pipe-text,
+  .sum-block p,
+  .demo-caption,
+  .report-caption {
+    font-size: 15px;
+  }
+
+  .pipeline {
+    grid-template-columns: 1fr;
+  }
+
+  .pipe-step {
+    padding: 16px 16px;
+  }
+
+  .pipe-num {
+    font-size: 24px;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 16px 0;
+  }
+
+  .stat .num {
+    font-size: 32px;
+  }
+
+  .slide-demo {
+    padding-bottom: 112px;
+  }
+
+  .report-frame {
+    min-height: 220px;
+    padding: 8px;
+  }
+
+  .demo-card {
+    padding: 18px 16px;
+  }
+
+  .demo-image {
+    max-height: 160px;
+    padding: 6px;
+  }
+
+  .footer {
+    left: 20px;
+    right: 20px;
+    bottom: 64px;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+  }
+
+  .controls {
+    right: 12px;
+    bottom: 12px;
+    gap: 4px;
+    padding: 4px;
+  }
+
+  .ctrl-btn {
+    width: 34px;
+    height: 34px;
+    font-size: 14px;
+  }
+
+  .ctrl-btn.wide {
+    padding: 0 10px;
+    font-size: 10px;
+  }
+
+  .hint {
+    display: none;
+  }
+
+  .notes {
+    padding: 18px 20px 22px;
+    max-height: 48vh;
+    font-size: 14px;
+  }
+}
+
+@media (max-height: 820px) {
+  .slide {
+    padding-top: 34px;
+    padding-bottom: 96px;
+  }
+
+  .strip {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+  }
+
+  .eyebrow {
+    margin-bottom: 10px;
+  }
+
+  h1.slide-title {
+    font-size: 32px;
+    margin-bottom: 8px;
+  }
+
+  .body {
+    gap: 16px;
+  }
+
+  .pipeline {
+    gap: 12px;
+  }
+
+  .pipe-step {
+    padding: 14px 14px;
+  }
+
+  .simple li,
+  .bullets li {
+    font-size: 16px;
+  }
+
+  .report-frame {
+    min-height: 220px;
+  }
+
+  .footer {
+    bottom: 56px;
   }
 }

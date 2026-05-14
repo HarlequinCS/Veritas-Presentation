@@ -7,6 +7,15 @@ const notesNum = document.getElementById('notes-slidenum');
 let current = 0;
 let notesVisible = false;
 
+function syncPageNumbers() {
+  slides.forEach((slide, index) => {
+    const pageEl = slide.querySelector('.page');
+    if (pageEl) {
+      pageEl.textContent = `${String(index + 1).padStart(2, '0')} / ${slides.length}`;
+    }
+  });
+}
+
 function updateNotes() {
   const slide = slides[current];
   const noteEl = slide.querySelector('.notes-content');
@@ -72,4 +81,5 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
+syncPageNumbers();
 render();
