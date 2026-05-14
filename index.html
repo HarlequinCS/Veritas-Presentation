@@ -92,7 +92,7 @@
     </section>
 
     <!-- SLIDE 4 -->
-    <section class="slide">
+    <section class="slide slide-simulation">
       <div class="strip">
         <span class="brand">VERITAS</span>
         <span>Chapter 1 · Aim & Objectives</span>
@@ -367,35 +367,52 @@
           <li><strong>Technical architecture:</strong> Executes within an <strong>Isolated Docker Sandbox</strong> utilizing a <strong>Redis Asynchronous Queue</strong> for non-blocking performance.</li>
         </ul>
 
-        <div class="col-card demo-card">
-          <h3>Visual PoC / Dashboard Demo</h3>
-          <figure class="demo-figure">
-            <img
-              src="./Scan.png"
-              alt="Simulated XSS and SQL injection exploit dashboard captured via Playwright"
-              class="demo-image"
-            />
-            <figcaption class="demo-caption">
-              Figure: Simulated XSS/SQLi Exploit Captured via Playwright
-            </figcaption>
-          </figure>
-        </div>
       </div>
       <div class="footer">
         <span class="candidate">Section 2.3 · AEG Pipeline · Playwright · PoC</span>
-        <span class="page">10 / 12</span>
+        <span class="page">10 / 13</span>
       </div>
       <div class="notes-content" data-script="This is the literature slide that most directly supports the simulation core of VERITAS. Chapter 2 treats exploit confirmation as an evidence problem - it is not enough to suspect a vulnerability, the system must verify whether it can actually be triggered. The AEG pipeline gives the conceptual workflow: identify, acquire, generate, and verify. Playwright provides the practical browser automation layer that allows that pipeline to run in a controlled environment. Mention that spider, proxy, and hybrid modes are discussed in the literature, and the hybrid approach is shown to outperform either mode in isolation. For technical depth during presentation, you can also note that the execution flow is intended to run within an isolated Docker sandbox and can be queued asynchronously through Redis for non-blocking orchestration. The visual placeholder can be used as the point where you explain how a captured exploit would be displayed to evaluators."></div>
     </section>
 
     <!-- SLIDE 11 -->
+    <section class="slide slide-demo">
+      <div class="strip">
+        <span class="brand">VERITAS</span>
+        <span>Chapter 2 · Literature Review</span>
+      </div>
+      <div class="body">
+        <div class="eyebrow">Slide 11 - Visual PoC / Dashboard Demo</div>
+        <h1 class="slide-title">Playwright output shown in a dedicated <em>report view</em>.</h1>
+
+        <figure class="report-figure">
+          <div class="report-frame">
+            <img
+              src="./report.png"
+              alt="Simulated XSS and SQL injection exploit report dashboard captured via Playwright"
+              class="report-image"
+            />
+          </div>
+          <figcaption class="report-caption">
+            Figure: Simulated XSS/SQLi Exploit Captured via Playwright
+          </figcaption>
+        </figure>
+      </div>
+      <div class="footer">
+        <span class="candidate">Visual PoC · Playwright Report View</span>
+        <span class="page">11 / 13</span>
+      </div>
+      <div class="notes-content" data-script="Use this slide as a clean visual stop. Instead of forcing the image to compete with the AEG pipeline and supporting bullets, the report is now isolated on its own slide so the full screen display remains readable. Explain that this figure represents the kind of evidence VERITAS aims to produce after simulation: a clear, inspectable output that helps developers understand what was tested, what was observed, and why the finding matters."></div>
+    </section>
+
+    <!-- SLIDE 12 -->
     <section class="slide">
       <div class="strip">
         <span class="brand">VERITAS</span>
         <span>Chapter 2 · Literature Review</span>
       </div>
       <div class="body">
-        <div class="eyebrow">Slide 11 - Real-Time Intelligence</div>
+        <div class="eyebrow">Slide 12 - Real-Time Intelligence</div>
         <h1 class="slide-title">Translating findings into <em>developer-readable action</em>.</h1>
         <ul class="bullets">
           <li><span class="num">01</span><span><strong>Real-time threat intelligence</strong> emphasizes continuous, near-immediate analysis and dissemination of security data.</span></li>
@@ -406,19 +423,19 @@
       </div>
       <div class="footer">
         <span class="candidate">Section 2.4 · Real-Time Intelligence & AI for Security Analysis</span>
-        <span class="page">11 / 12</span>
+        <span class="page">12 / 13</span>
       </div>
       <div class="notes-content" data-script="Clarify that this slide is about why VERITAS includes an intelligence layer rather than only a simulation layer. Simulation can show that a flaw is real, but the developer still needs help understanding cause, impact, and fix. Chapter 2 argues that LLMs are valuable precisely because they can translate technical security outputs into more accessible explanations and even propose context-aware repairs. When discussing the SAFE example, refer to GPT-4o as the model aligned with the current OpenAI naming. The point is not to claim that AI is perfect, but to show that the literature supports its use as a bridge between security findings and developer action. That bridge is central to VERITAS."></div>
     </section>
 
-    <!-- SLIDE 12 -->
+    <!-- SLIDE 13 -->
     <section class="slide">
       <div class="strip">
         <span class="brand">VERITAS</span>
         <span>Summary · Q&amp;A</span>
       </div>
       <div class="body">
-        <div class="eyebrow">Slide 12 - Summary &amp; Q&amp;A</div>
+        <div class="eyebrow">Slide 13 - Summary &amp; Q&amp;A</div>
         <h1 class="slide-title">Closing the loop from <em>detection</em> to <em>action</em>.</h1>
 
         <div class="summary-grid">
@@ -443,7 +460,7 @@
       </div>
       <div class="footer">
         <span class="candidate">Thank you · Questions are welcomed</span>
-        <span class="page">12 / 12</span>
+        <span class="page">13 / 13</span>
       </div>
       <div class="notes-content" data-script="Close by showing the logical flow of the entire presentation. Chapter 1 established the practical problem and the project response. Chapter 2 provided the conceptual and empirical support: OWASP gives the benchmark, AI-code studies justify the target problem, SAST and DAST explain current limitations, simulation literature supports exploit confirmation, and AI-assisted explanation supports simplified output and remediation guidance. End by saying that VERITAS is justified not by one source alone, but by the convergence of these research strands into a single developer-oriented workflow. Then thank the committee and transition to questions."></div>
     </section>
@@ -454,7 +471,7 @@
   <div class="notes" id="notes-panel">
     <div class="notes-header">
       <span class="notes-title">Speaker Script</span>
-      <span class="notes-slidenum" id="notes-slidenum">Slide 1 / 12</span>
+      <span class="notes-slidenum" id="notes-slidenum">Slide 1 / 13</span>
     </div>
     <p id="notes-text">Loading...</p>
   </div>
