@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VERITAS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="progress-track"><div class="progress-fill" id="progress"></div></div>
+
+  <div class="deck">
+
+    <!-- SLIDE 1 -->
+    <section class="slide title-slide active">
+      <div class="strip">
+        <span class="brand">VERITAS</span>
+        <span>Universiti Teknologi MARA · CSP600</span>
+      </div>
+      <div class="body">
+        <div class="eyebrow">Project Formulation Presentation</div>
+        <h1 class="slide-title">VERITAS</h1>
+        <p class="subtitle">Web Vulnerability Evaluation and Real-time Intelligence Through Automated Simulation</p>
+        <div class="title-rule"></div>
+        <div class="title-meta">
+          <div class="key">Prepared by</div>
+          <div class="val primary">Muhammad Saiful Iqbal Bin Abdul Rani</div>
+
+          <div class="key">Student ID</div>
+          <div class="val">2025101407 &nbsp;·&nbsp; Group CDCS2515A</div>
+
+          <div class="key">Area of Study</div>
+          <div class="val">Cybersecurity</div>
+
+          <div class="key">Supervisor</div>
+          <div class="val">Prof. Madya Ts. Dr. Alya Geogiana Binti Buja</div>
+
+          <div class="key">Faculty</div>
+          <div class="val">Computer and Mathematical Sciences, UiTM</div>
+        </div>
+      </div>
+      <div class="notes-content" data-script="Open by greeting the audience and stating the project title exactly as approved in Chapter 1. Introduce yourself, your supervisor, and the area of study. Keep the opening brief and formal - the goal here is simply to orient the audience to the identity of the work. Mention that the presentation is built directly from Chapter 1 and Chapter 2 of the formulation document, and that you will walk through the problem, the proposed system, and the literature justification."></div>
+    </section>
+
+    <!-- SLIDE 2 -->
+    <section class="slide">
+      <div class="strip">
+        <span class="brand">VERITAS</span>
+        <span>Chapter 1 · Background</span>
+      </div>
+      <div class="body">
+        <div class="eyebrow">Slide 02 - Background</div>
+        <h1 class="slide-title">The rise of <em>vibe coding</em> changed how developers meet security.</h1>
+        <ul class="simple">
+          <li><strong>AI-assisted development</strong> lets users build full applications from natural-language prompts.</li>
+          <li>This high-level approach often <strong>detaches developers from the underlying security architecture</strong>.</li>
+          <li>AI tools may reproduce <strong>legacy vulnerabilities</strong> and insecure patterns from training data.</li>
+          <li><strong>Headless browser simulation</strong> can demonstrate flaws visually, not just describe them.</li>
+        </ul>
+      </div>
+      <div class="footer">
+        <span class="candidate">M. Saiful Iqbal · 2025101407</span>
+        <span class="page">02 / 12</span>
+      </div>
+      <div class="notes-content" data-script="Explain that the background is not just about AI making development faster. The deeper issue is that AI-assisted development changes the relationship between the developer and the code. When users generate applications through prompts, they may obtain working functionality without understanding the security assumptions embedded in the output. This creates a mismatch between development speed and security awareness. Conclude by saying that simulation matters here because for developers who think visually and functionally, seeing a flaw executed is far more meaningful than reading a technical warning. That insight becomes the foundation for VERITAS."></div>
+    </section>
+
+    <!-- SLIDE 3 -->
+    <section class="slide">
+      <div class="strip">
+        <span class="brand">VERITAS</span>
+        <span>Chapter 1 · Problem Statement</span>
+      </div>
+      <div class="body">
+        <div class="eyebrow">Slide 03 - Problem Statement</div>
+        <h1 class="slide-title">Four problems that <em>existing tools do not solve</em>.</h1>
+        <ul class="bullets">
+          <li><span class="num">01</span><span><strong>High dependency, low confidence.</strong> Developers use AI heavily but do not trust the security of generated code.</span></li>
+          <li><span class="num">02</span><span><strong>Technical reports.</strong> Existing security outputs are too complex for non-specialist developers to act on.</span></li>
+          <li><span class="num">03</span><span><strong>False positives.</strong> Frequent inaccurate alerts cause fatigue and erode trust in automation.</span></li>
+          <li><span class="num">04</span><span><strong>No exploit validation.</strong> Developers need to know what is real and exploitable, plus how to fix it.</span></li>
+        </ul>
+      </div>
+      <div class="footer">
+        <span class="candidate">M. Saiful Iqbal · 2025101407</span>
+        <span class="page">03 / 12</span>
+      </div>
+      <div class="notes-content" data-script="Present these four problems as a connected chain, not four isolated issues. First, developers rely on AI but do not trust the security of the output. Second, when security tools do report something, the reports are too technical to understand. Third, many of those reports are false positives, which causes fatigue. Fourth, what developers actually need is validation that a finding is real and guidance on how to fix it. Make sure to land the final point clearly: the chain ends in a need for exploit confirmation and simplified remediation. That is the foundation of the proposed VERITAS framework."></div>
+    </section>
+
+    <!-- SLIDE 4 -->
+    <section class="slide">
+      <div class="strip">
+        <span class="brand">VERITAS</span>
+        <span>Chapter 1 · Aim & Objectives</span>
+      </div>
+      <div class="body">
+        <div class="eyebrow">Slide 04 - Aim & Objectives</div>
+        <h1 class="slide-title">From detection to <em>exploit confirmation</em>.</h1>
+
+        <div class="pullquote">
+          <div class="qlabel">Project Aim</div>
+          <p>"Develop a browser-simulation-based security validation system that assists developers regardless of their foundational security knowledge in securing both traditional and AI-generated web applications."</p>
+        </div>
+
+        <ul class="bullets" style="margin-top: 8px;">
+          <li><span class="num">RO1</span><span><strong>Design</strong> a modular architecture integrating Playwright and Large Language Models.</span></li>
+          <li><span class="num">RO2</span><span><strong>Develop</strong> a prototype that performs attacker-style interactions and produces visual proof-of-concept evidence.</span></li>
+          <li><span class="num">RO3</span><span><strong>Evaluate</strong> the framework using DVWA, OWASP Juice Shop, and AI-generated test cases.</span></li>
+        </ul>
+      </div>
+      <div class="footer">
+        <span class="candidate">M. Saiful Iqbal · 2025101407</span>
+        <span class="page">04 / 12</span>
+      </div>
+      <div class="notes-content" data-script="State the aim first. It explains what VERITAS is fundamentally trying to be: a security validation system centered on exploit confirmation, not just detection. Then move through the three objectives as a progression. RO1 designs the architecture, RO2 builds the prototype, RO3 evaluates the result. Mention that Chapter 1 explicitly says the objectives follow S.M.A.R.T. criteria, so they are specific and measurable. The important message is that this project has a structured pathway from design to testing - it is not just a concept."></div>
+    </section>
+
+    <!-- SLIDE 5 -->
+    <section class="slide">
+      <div class="strip">
+        <span class="brand">VERITAS</span>
+        <span>Chapter 1 · Scope</span>
+      </div>
+      <div class="body">
+        <div class="eyebrow">Slide 05 - Project Scope</div>
+        <h1 class="slide-title">Operationally bounded, <em>ethically disciplined</em>.</h1>
+
+        <div class="two-col">
+          <div class="col-card">
+            <h3>In Scope</h3>
+            <ul>
+              <li>Hybrid analysis: Black Box (URL) and White Box (source code)</li>
+              <li>Big 5 vulnerabilities derived from the OWASP Top 10</li>
+              <li>Evidence-based validation through screenshots and interaction logs</li>
+              <li>Simulated attacker behaviour and simplified remediation intelligence</li>
+              <li>Evaluation on DVWA, OWASP Juice Shop, and AI-generated test cases</li>
+            </ul>
+          </div>
+          <div class="col-card alt">
+            <h3>Out of Scope</h3>
+            <ul>
+              <li>Production environments</li>
+              <li>Non-consensual testing</li>
+              <li>Infrastructure-layer testing (firewalls, port scanning)</li>
+              <li>Destructive exploitation or Denial of Service</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <span class="candidate">M. Saiful Iqbal · 2025101407</span>
+        <span class="page">05 / 12</span>
+      </div>
+      <div class="notes-content" data-script="Use this slide to show that the project is ambitious but bounded. The operational core is hybrid: URL-based analysis for exploit validation, and source-based inspection for insecure coding patterns. The technical focus is on a small set of critical vulnerability classes, not the entire cybersecurity landscape. The exclusions are equally important - they establish ethical and research discipline. By explicitly avoiding production systems, non-consensual testing, infrastructure scanning, and destructive payloads, the project remains feasible and research-safe. Mention that this clarity in scope is what makes the project viable within the timeline of CSP600."></div>
+    </section>
+
+    <!-- SLIDE 6 -->
+    <section class="slide">
+      <div class="strip">
+        <span class="brand">VERITAS</span>
+        <span>Chapter 1 · Significance</span>
+      </div>
+      <div class="body">
+        <div class="eyebrow">Slide 06 - Significance</div>
+        <h1 class="slide-title">Built for the developers who need it most.</h1>
+        <ul class="simple">
+          <li>VERITAS addresses the vulnerability of web applications built in the era of <strong>AI-assisted \"vibe coding\"</strong>.</li>
+          <li>It aims to <strong>reduce alert fatigue</strong> by validating findings through active browser-based simulation.</li>
+          <li>It helps students and less experienced developers focus on <strong>verified, high-impact threats</strong>.</li>
+          <li>It links <strong>Software Engineering, Cybersecurity, and Artificial Intelligence</strong> within the modern SDLC.</li>
+        </ul>
+
+        <div class="pullquote" style="margin-top: 12px;">
+          <div class="qlabel">Core Position</div>
+          <p>\"Shifting the security paradigm from detection-only to exploit-confirmation.\"</p>
+        </div>
+      </div>
+      <div class="footer">
+        <span class="candidate">M. Saiful Iqbal · 2025101407</span>
+        <span class="page">06 / 12</span>
+      </div>
+      <div class="notes-content" data-script="This slide should answer the question: why does this project matter? Chapter 1 says the significance lies in shifting from passive identification to practical secure development. Emphasize that the intended beneficiaries are developers who are overwhelmed by existing reporting, particularly students and less experienced practitioners. Also highlight the interdisciplinary value: the project sits at the intersection of software engineering, cybersecurity, and AI, which makes it relevant to how modern software is actually built. End by quoting the core position from Chapter 1: VERITAS shifts the paradigm from detection-only to exploit-confirmation."></div>
+    </section>
+
+    <!-- SLIDE 7 -->
+    <section class="slide">
+      <div class="strip">
+        <span class="brand">VERITAS</span>
+        <span>Chapter 2 · Literature Review</span>
+      </div>
+      <div class="body">
+        <div class="eyebrow">Slide 07 - OWASP Top 10 (2025)</div>
+        <h1 class="slide-title">A globally recognized <em>benchmark</em> for web security.</h1>
+
+        <div class="table-wrap">
+          <table class="data">
+            <thead>
+              <tr>
+                <th>Vulnerability Category</th>
+                <th>CWEs</th>
+                <th>Max Incidence</th>
+                <th>Total CVEs</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>Broken Access Control</strong></td><td>40</td><td>20.15%</td><td>32,654</td></tr>
+              <tr><td><strong>Security Misconfiguration</strong></td><td>16</td><td>27.70%</td><td>1,375</td></tr>
+              <tr><td><strong>Injection</strong></td><td>37</td><td>13.77%</td><td>62,445</td></tr>
+              <tr><td><strong>Insecure Design</strong></td><td>39</td><td>22.18%</td><td>7,647</td></tr>
+              <tr><td><strong>Authentication Failures</strong></td><td>36</td><td>15.80%</td><td>7,147</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="footer">
+        <span class="candidate">Table 2.1 · OWASP Top 10 (Andrew van der Stock et al., 2025)</span>
+        <span class="page">07 / 12</span>
+      </div>
+      <div class="notes-content" data-script="Explain that the literature review begins with OWASP because the project needs a credible and widely recognized benchmark for vulnerability classification. You do not need to read every value on the screen - just highlight that this taxonomy frames the categories your project will target. The purpose of the slide is to show that VERITAS is not built around arbitrary categories; it is anchored in an established industry and research standard. That makes the proposed framework easier to justify academically and technically. Mention that Chapter 1 then narrows this benchmark into the Big 5 that the project will focus on."></div>
+    </section>
+
+    <!-- SLIDE 8 -->
+    <section class="slide">
+      <div class="strip">
+        <span class="brand">VERITAS</span>
+        <span>Chapter 2 · Literature Review</span>
+      </div>
+      <div class="body">
+        <div class="eyebrow">Slide 08 - Human vs AI-Generated Code</div>
+        <h1 class="slide-title">AI-generated code carries a <em>different risk profile</em>.</h1>
+
+        <div class="table-wrap">
+          <table class="data">
+            <thead>
+              <tr>
+                <th>Parameter</th>
+                <th>Human-Written Code</th>
+                <th>AI-Generated Code</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Structural complexity</strong></td>
+                <td>Higher, more maintainable variation</td>
+                <td>Lower, simpler, reduced lexical diversity</td>
+              </tr>
+              <tr>
+                <td><strong>High-risk vulnerabilities</strong></td>
+                <td>Lower proportion</td>
+                <td>Significantly higher proportion</td>
+              </tr>
+              <tr>
+                <td><strong>Repetition & unused constructs</strong></td>
+                <td>Lower</td>
+                <td>Higher, prone to debug remnants</td>
+              </tr>
+              <tr>
+                <td><strong>Length & token usage</strong></td>
+                <td>Higher (standard verbosity)</td>
+                <td>Lower</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="footer">
+        <span class="candidate">Table 2.2 · Comparison of Quality & Security Attributes (Cotroneo et al., 2025)</span>
+        <span class="page">08 / 12</span>
+      </div>
+      <div class="notes-content" data-script="Present this comparison as one of the strongest justifications for VERITAS. The point is not that human-written code is good and AI-generated code is bad. The point is that AI-generated code has a different risk profile. It tends to be simpler, but that simplicity can hide important security weaknesses. The literature shows a significantly higher proportion of high-risk vulnerabilities in AI-generated code. This means developers who rely on AI need a validation mechanism tailored to the kinds of flaws AI tends to produce. That is exactly where VERITAS positions itself."></div>
+    </section>
+
+    <!-- SLIDE 9 -->
+    <section class="slide">
+      <div class="strip">
+        <span class="brand">VERITAS</span>
+        <span>Chapter 2 · Literature Review</span>
+      </div>
+      <div class="body">
+        <div class="eyebrow">Slide 09 - Traditional Tools and the Gap</div>
+        <h1 class="slide-title">SAST and DAST each solve <em>only part of the problem</em>.</h1>
+
+        <div class="two-col">
+          <div class="col-card">
+            <h3>SAST - Static Analysis</h3>
+            <ul>
+              <li>White-box approach with full access to source code</li>
+              <li>Effective early in the SDLC for structural flaws</li>
+              <li>Tends to produce a high rate of false positives</li>
+              <li>Weak at runtime and interaction-driven vulnerabilities</li>
+            </ul>
+          </div>
+          <div class="col-card alt">
+            <h3>DAST - Dynamic Analysis</h3>
+            <ul>
+              <li>Black-box approach against a running application</li>
+              <li>Strong for runtime and configuration issues</li>
+              <li>Applied later in the SDLC, when fixes are costlier</li>
+              <li>Often lacks source-level remediation context</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="stats" style="margin-top: 6px;">
+          <div class="stat">
+            <div class="num">30-100%</div>
+            <div class="lbl">Reported false positive range in static analysis (Guo et al., 2023)</div>
+          </div>
+          <div class="stat">
+            <div class="num">Alert</div>
+            <div class="lbl">Fatigue erodes trust and tool adoption</div>
+          </div>
+          <div class="stat">
+            <div class="num">Detection</div>
+            <div class="lbl">Without context-rich remediation guidance</div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <span class="candidate">Table 2.3 · SAST vs DAST · Sections 2.2.3-2.2.4</span>
+        <span class="page">09 / 12</span>
+      </div>
+      <div class="notes-content" data-script="Use this slide to show why existing tools are necessary but insufficient. SAST analyses the code early, DAST tests the running application, but neither closes the full loop from detection to developer action. Chapter 2 emphasizes that scanners can produce findings, yet developers still struggle to decide what matters, why it matters, and how to fix it. The gap is widened by false positive rates that can range from 30 to 100 percent, which drives alert fatigue. This allows you to position VERITAS not as a replacement for existing tools, but as a framework that addresses what they leave unresolved."></div>
+    </section>
+
+    <!-- SLIDE 10 -->
+    <section class="slide">
+      <div class="strip">
+        <span class="brand">VERITAS</span>
+        <span>Chapter 2 · Literature Review</span>
+      </div>
+      <div class="body">
+        <div class="eyebrow">Slide 10 - Automated Simulation</div>
+        <h1 class="slide-title">Proving exploitability through <em>active simulation</em>.</h1>
+
+        <div class="pipeline">
+          <div class="pipe-step">
+            <div class="pipe-num">01</div>
+            <div class="pipe-label">Identify</div>
+            <div class="pipe-text">Locate the vulnerable condition in the application.</div>
+          </div>
+          <div class="pipe-step">
+            <div class="pipe-num">02</div>
+            <div class="pipe-label">Acquire</div>
+            <div class="pipe-text">Gather runtime information needed for exploitation.</div>
+          </div>
+          <div class="pipe-step">
+            <div class="pipe-num">03</div>
+            <div class="pipe-label">Generate</div>
+            <div class="pipe-text">Construct an exploit payload suited to the context.</div>
+          </div>
+          <div class="pipe-step">
+            <div class="pipe-num">04</div>
+            <div class="pipe-label">Verify</div>
+            <div class="pipe-text">Confirm exploit effectiveness through observable evidence.</div>
+          </div>
+        </div>
+
+        <ul class="simple" style="margin-top: 6px;">
+          <li><strong>Playwright</strong> supports headless mode and parallel execution for scalable security testing.</li>
+          <li>Spider, proxy, and the <strong>Spider-Last hybrid</strong> approach offer complementary coverage.</li>
+          <li><strong>Proof-of-concept</strong> exploit data makes vulnerabilities tangible and reproducible.</li>
+        </ul>
+      </div>
+      <div class="footer">
+        <span class="candidate">Section 2.3 · AEG Pipeline · Playwright · PoC</span>
+        <span class="page">10 / 12</span>
+      </div>
+      <div class="notes-content" data-script="This is the literature slide that most directly supports the simulation core of VERITAS. Chapter 2 treats exploit confirmation as an evidence problem - it is not enough to suspect a vulnerability, the system must verify whether it can actually be triggered. The AEG pipeline gives the conceptual workflow: identify, acquire, generate, and verify. Playwright provides the practical browser automation layer that allows that pipeline to run in a controlled environment. Mention that spider, proxy, and hybrid modes are discussed in the literature, and the hybrid approach is shown to outperform either mode in isolation. This grounds VERITAS in established simulation research rather than presenting browser automation without precedent."></div>
+    </section>
+
+    <!-- SLIDE 11 -->
+    <section class="slide">
+      <div class="strip">
+        <span class="brand">VERITAS</span>
+        <span>Chapter 2 · Literature Review</span>
+      </div>
+      <div class="body">
+        <div class="eyebrow">Slide 11 - Real-Time Intelligence</div>
+        <h1 class="slide-title">Translating findings into <em>developer-readable action</em>.</h1>
+        <ul class="bullets">
+          <li><span class="num">01</span><span><strong>Real-time threat intelligence</strong> emphasizes continuous, near-immediate analysis and dissemination of security data.</span></li>
+          <li><span class="num">02</span><span><strong>OpenAI and LLMs</strong> can analyze code, generate contextual explanations, and propose remediation patterns.</span></li>
+          <li><span class="num">03</span><span><strong>SAFE</strong> translates dense SAST findings into step-by-step developer-friendly walkthroughs.</span></li>
+          <li><span class="num">04</span><span><strong>GenAI remediation</strong> produces context-aware fixes and reduces time-to-remediation.</span></li>
+        </ul>
+      </div>
+      <div class="footer">
+        <span class="candidate">Section 2.4 · Real-Time Intelligence & AI for Security Analysis</span>
+        <span class="page">11 / 12</span>
+      </div>
+      <div class="notes-content" data-script="Clarify that this slide is about why VERITAS includes an intelligence layer rather than only a simulation layer. Simulation can show that a flaw is real, but the developer still needs help understanding cause, impact, and fix. Chapter 2 argues that LLMs are valuable precisely because they can translate technical security outputs into more accessible explanations and even propose context-aware repairs. The point is not to claim that AI is perfect, but to show that the literature supports its use as a bridge between security findings and developer action. That bridge is central to VERITAS."></div>
+    </section>
+
+    <!-- SLIDE 12 -->
+    <section class="slide">
+      <div class="strip">
+        <span class="brand">VERITAS</span>
+        <span>Summary · Q&amp;A</span>
+      </div>
+      <div class="body">
+        <div class="eyebrow">Slide 12 - Summary &amp; Q&amp;A</div>
+        <h1 class="slide-title">Closing the loop from <em>detection</em> to <em>action</em>.</h1>
+
+        <div class="summary-grid">
+          <div class="sum-block">
+            <h4>The Problem</h4>
+            <p>AI-dependent developers face technical reports, false positives, and unverified findings. They need exploit validation and simplified remediation.</p>
+          </div>
+          <div class="sum-block">
+            <h4>The Evidence</h4>
+            <p>OWASP, AI-code risk studies, SAST and DAST limitations, simulation research, and AI explanation literature converge toward an integrated solution.</p>
+          </div>
+          <div class="sum-block">
+            <h4>The Proposal</h4>
+            <p>VERITAS connects detection, exploit confirmation, and AI-assisted remediation into one developer-oriented workflow.</p>
+          </div>
+        </div>
+
+        <div class="pullquote">
+          <div class="qlabel">Closing Statement</div>
+          <p>\"The literature supports VERITAS not through any single source, but through the convergence of detection, simulation, and intelligence into one unified security pipeline.\"</p>
+        </div>
+      </div>
+      <div class="footer">
+        <span class="candidate">Thank you · Questions are welcomed</span>
+        <span class="page">12 / 12</span>
+      </div>
+      <div class="notes-content" data-script="Close by showing the logical flow of the entire presentation. Chapter 1 established the practical problem and the project response. Chapter 2 provided the conceptual and empirical support: OWASP gives the benchmark, AI-code studies justify the target problem, SAST and DAST explain current limitations, simulation literature supports exploit confirmation, and AI-assisted explanation supports simplified output and remediation guidance. End by saying that VERITAS is justified not by one source alone, but by the convergence of these research strands into a single developer-oriented workflow. Then thank the committee and transition to questions."></div>
+    </section>
+
+  </div>
+
+  <!-- Speaker Notes Panel -->
+  <div class="notes" id="notes-panel">
+    <div class="notes-header">
+      <span class="notes-title">Speaker Script</span>
+      <span class="notes-slidenum" id="notes-slidenum">Slide 1 / 12</span>
+    </div>
+    <p id="notes-text">Loading...</p>
+  </div>
+
+  <div class="hint">
+    <kbd>&larr;</kbd><kbd>&rarr;</kbd> Navigate
+    <kbd>N</kbd> Notes
+    <kbd>F</kbd> Fullscreen
+    <kbd>Home</kbd>/<kbd>End</kbd> Jump
+  </div>
+
+  <div class="controls">
+    <button class="ctrl-btn" id="prev" title="Previous">&lsaquo;</button>
+    <button class="ctrl-btn wide" id="notes-toggle" title="Toggle Speaker Notes">Notes</button>
+    <button class="ctrl-btn" id="next" title="Next">&rsaquo;</button>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
