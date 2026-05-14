@@ -364,13 +364,50 @@
           <li><strong>Playwright</strong> supports headless mode and parallel execution for scalable security testing.</li>
           <li>Spider, proxy, and the <strong>Spider-Last hybrid</strong> approach offer complementary coverage.</li>
           <li><strong>Proof-of-concept</strong> exploit data makes vulnerabilities tangible and reproducible.</li>
+          <li><strong>Technical architecture:</strong> Executes within an <strong>Isolated Docker Sandbox</strong> utilizing a <strong>Redis Asynchronous Queue</strong> for non-blocking performance.</li>
         </ul>
+
+        <div class="col-card" style="max-width: 980px; padding: 22px 24px;">
+          <h3 style="margin-bottom: 14px;">Visual PoC / Dashboard Demo</h3>
+          <div
+            role="img"
+            aria-label="Simulated exploit dashboard placeholder showing captured XSS and SQL injection activity"
+            style="
+              width: 100%;
+              min-height: 190px;
+              border: 2px dashed var(--gold);
+              background:
+                linear-gradient(180deg, rgba(30, 58, 95, 0.06), rgba(20, 41, 67, 0.12)),
+                repeating-linear-gradient(
+                  90deg,
+                  rgba(30, 58, 95, 0.05) 0,
+                  rgba(30, 58, 95, 0.05) 1px,
+                  transparent 1px,
+                  transparent 32px
+                );
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              text-align: center;
+              padding: 24px;
+              color: var(--navy);
+              font-size: 18px;
+              font-weight: 600;
+              line-height: 1.5;
+            "
+          >
+            Visual PoC / Dashboard Demo Placeholder
+          </div>
+          <p style="margin-top: 12px; font-size: 16px; line-height: 1.5; color: var(--ink-soft);">
+            Figure: Simulated XSS/SQLi Exploit Captured via Playwright
+          </p>
+        </div>
       </div>
       <div class="footer">
         <span class="candidate">Section 2.3 · AEG Pipeline · Playwright · PoC</span>
         <span class="page">10 / 12</span>
       </div>
-      <div class="notes-content" data-script="This is the literature slide that most directly supports the simulation core of VERITAS. Chapter 2 treats exploit confirmation as an evidence problem - it is not enough to suspect a vulnerability, the system must verify whether it can actually be triggered. The AEG pipeline gives the conceptual workflow: identify, acquire, generate, and verify. Playwright provides the practical browser automation layer that allows that pipeline to run in a controlled environment. Mention that spider, proxy, and hybrid modes are discussed in the literature, and the hybrid approach is shown to outperform either mode in isolation. This grounds VERITAS in established simulation research rather than presenting browser automation without precedent."></div>
+      <div class="notes-content" data-script="This is the literature slide that most directly supports the simulation core of VERITAS. Chapter 2 treats exploit confirmation as an evidence problem - it is not enough to suspect a vulnerability, the system must verify whether it can actually be triggered. The AEG pipeline gives the conceptual workflow: identify, acquire, generate, and verify. Playwright provides the practical browser automation layer that allows that pipeline to run in a controlled environment. Mention that spider, proxy, and hybrid modes are discussed in the literature, and the hybrid approach is shown to outperform either mode in isolation. For technical depth during presentation, you can also note that the execution flow is intended to run within an isolated Docker sandbox and can be queued asynchronously through Redis for non-blocking orchestration. The visual placeholder can be used as the point where you explain how a captured exploit would be displayed to evaluators."></div>
     </section>
 
     <!-- SLIDE 11 -->
@@ -385,7 +422,7 @@
         <ul class="bullets">
           <li><span class="num">01</span><span><strong>Real-time threat intelligence</strong> emphasizes continuous, near-immediate analysis and dissemination of security data.</span></li>
           <li><span class="num">02</span><span><strong>OpenAI and LLMs</strong> can analyze code, generate contextual explanations, and propose remediation patterns.</span></li>
-          <li><span class="num">03</span><span><strong>SAFE</strong> translates dense SAST findings into step-by-step developer-friendly walkthroughs.</span></li>
+          <li><span class="num">03</span><span><strong>SAFE</strong>, powered by <strong>GPT-4o</strong>, translates dense SAST findings into step-by-step developer-friendly walkthroughs.</span></li>
           <li><span class="num">04</span><span><strong>GenAI remediation</strong> produces context-aware fixes and reduces time-to-remediation.</span></li>
         </ul>
       </div>
@@ -393,7 +430,7 @@
         <span class="candidate">Section 2.4 · Real-Time Intelligence & AI for Security Analysis</span>
         <span class="page">11 / 12</span>
       </div>
-      <div class="notes-content" data-script="Clarify that this slide is about why VERITAS includes an intelligence layer rather than only a simulation layer. Simulation can show that a flaw is real, but the developer still needs help understanding cause, impact, and fix. Chapter 2 argues that LLMs are valuable precisely because they can translate technical security outputs into more accessible explanations and even propose context-aware repairs. The point is not to claim that AI is perfect, but to show that the literature supports its use as a bridge between security findings and developer action. That bridge is central to VERITAS."></div>
+      <div class="notes-content" data-script="Clarify that this slide is about why VERITAS includes an intelligence layer rather than only a simulation layer. Simulation can show that a flaw is real, but the developer still needs help understanding cause, impact, and fix. Chapter 2 argues that LLMs are valuable precisely because they can translate technical security outputs into more accessible explanations and even propose context-aware repairs. When discussing the SAFE example, refer to GPT-4o as the model aligned with the current OpenAI naming. The point is not to claim that AI is perfect, but to show that the literature supports its use as a bridge between security findings and developer action. That bridge is central to VERITAS."></div>
     </section>
 
     <!-- SLIDE 12 -->
